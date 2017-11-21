@@ -12,6 +12,6 @@ e2 = Encounter.create(body: "Darkness consumes you again as you descend to the f
 
 e3 = Encounter.create(body: "An orange light pierces the shadows, revealing thousands of people marching towards a horizon covered by a massive grey duststorm.")
 
-c1 = Choice.create(encounter: e1, body: "Ignore the siren's song and fall back to sleep.", next: e2)
+c1 = Choice.create(encounter: e1, body: "Ignore the siren's song and fall back to sleep.", next: 2)
 
-c2 = Choice.create(encounter: e1, body: "Heed the call. Awaken.", next: e3)
+c2 = Choice.create(encounter: e1, body: "Heed the call. Awaken.", next: 3)
