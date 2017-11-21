@@ -2,8 +2,8 @@ import React from 'react';
 import Footer from './components/Footer'
 import AddTodo from './containers/AddTodo'
 import VisibleTodoList from './containers/VisibleTodoList'
-
-// import store from './stores/store';
+import EncounterContainer from './containers/EncounterContainer'
+import store from './stores/store';
 
 // let unsubscribe = store.subscribe(() => {
 //   console.log(store.getState());
@@ -19,9 +19,7 @@ import VisibleTodoList from './containers/VisibleTodoList'
 const App = props => {
   return(
     <div>
-      <AddTodo />
-      <VisibleTodoList />
-      <Footer />
+      <EncounterContainer store={store}/>
     </div>
   )
 }

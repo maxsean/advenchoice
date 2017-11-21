@@ -1,4 +1,5 @@
 import count from '../reducers/count';
+import encounter from '../reducers/encounter';
 
 const createStore = reducer => {
   let state;
@@ -27,6 +28,6 @@ const createStore = reducer => {
   return store;
 }
 
-const store = createStore(count);
+const store = createStore(encounter);
 
 export default store;
