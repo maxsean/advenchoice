@@ -1,9 +1,12 @@
 import React from 'react'
-
+import Choices from '../connectors/Choices'
 
 class EncounterContainer extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      change: {}
+    }
   }
 
   componentDidMount() {
@@ -16,10 +19,13 @@ class EncounterContainer extends React.Component {
       console.log(this.props.choices)
     })
   }
+
   render(){
+    let encounterText = this.props.encounter.body
     return(
       <div>
-        Hello
+        {encounterText}
+        <Choices/>
       </div>
     )
   }
