@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './components/Footer'
 import AddTodo from './containers/AddTodo'
 import VisibleTodoList from './containers/VisibleTodoList'
-import EncounterContainer from './containers/EncounterContainer'
+import Encounter from './connectors/Encounter'
 import store from './stores/store';
 
 // let unsubscribe = store.subscribe(() => {
@@ -19,7 +19,7 @@ import store from './stores/store';
 const App = props => {
   return(
     <div>
-      <EncounterContainer store={store}/>
+      <Encounter />
     </div>
   )
 }
