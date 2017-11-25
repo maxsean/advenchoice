@@ -5,8 +5,7 @@ import EncounterContainer from '../containers/EncounterContainer'
 
 const mapStateToProps = state => {
   return {
-    encounter: state.encounter,
-    choices: state.choices
+    encounter: state.encounter
   }
 }
 

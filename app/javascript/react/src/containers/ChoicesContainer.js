@@ -9,26 +9,29 @@ class ChoicesContainer extends React.Component{
 
   handleClick(e){
     e.preventDefault()
+    this.props.dispatch({type: 'ADD_TRAIT', trait: e.target.dataset.outcome})
     let encounter_id = e.target.dataset.next
     fetch(`/api/v1/encounters/${encounter_id}`)
     .then(response => response.json())
     .then(data => {
-      this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data.encounter, choices: data.choices})
-      console.log(this.props.encounter)
-      console.log(this.props.choices)
+      this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})
+      console.log(this.props)
     })
   }
 
   render(){
-    let choices = this.props.choices.map(choice => {
-      return(
-        <ChoiceTile
-          key={String(Date.now()) + '-' + choice.id}
-          choice={choice}
-          handleClick={this.handleClick}
-        />
-      )
-    })
+    let choices;
+    if (this.props.choices.length > 0) {
+      choices = this.props.choices.map(choice => {
+        return(
+          <ChoiceTile
+            key={String(Date.now()) + '-' + choice.id}
+            choice={choice}
+            handleClick={this.handleClick}
+          />
+        )
+      })
+    }
     return(
       <div>
         <ul>
