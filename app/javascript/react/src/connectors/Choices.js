@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import ChoicesContainer from '../containers/ChoicesContainer'
 
 const mapStateToProps = state => {
   return {
-    choices: state.choices
+    choices: state.encounter.choices,
+    state: state
   }
 }
 

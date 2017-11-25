@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20171121160350) do
 
   create_table "outcomes", force: :cascade do |t|
     t.bigint "choice_id"
-    t.string "type"
+    t.string "outcome_type"
     t.string "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

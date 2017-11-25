@@ -1,5 +1,5 @@
 import count from '../reducers/count';
-import encounter from '../reducers/encounter';
+import adventure from '../reducers/adventure';
 
 const createStore = reducer => {
   let state;
@@ -28,6 +28,6 @@ const createStore = reducer => {
   return store;
 }
 
-const store = createStore(encounter);
+const store = createStore(adventure);
 
 export default store;

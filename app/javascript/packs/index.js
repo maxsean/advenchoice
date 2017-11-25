@@ -4,9 +4,9 @@ import App from '../react/src/App';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from '../react/src/reducers/reducers'
-import encounter from '../react/src/reducers/encounter'
+import adventure from '../react/src/reducers/adventure'
 
-let store = createStore(encounter)
+let store = createStore(adventure)
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
