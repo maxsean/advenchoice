@@ -5,13 +5,23 @@ class ChoicesContainer extends React.Component{
   constructor(props){
     super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.fetchEncounter = this.fetchEncounter.bind(this)
   }
 
   handleClick(e){
     e.preventDefault()
-    this.props.dispatch({type: 'ADD_TRAIT', trait: e.target.dataset.outcome})
-    let encounter_id = e.target.dataset.next
-    fetch(`/api/v1/encounters/${encounter_id}`)
+    debugger;
+    if (e.target.dataset.outcome_type == "trait") {
+      this.props.dispatch({type: 'ADD_TRAIT', trait: e.target.dataset.outcome})
+    } else if (e.target.dataset.outcome_type == "add_item") {
+      this.props.dispatch({type: 'ADD_ITEM', item: e.target.dataset.outcome})
+    }
+
+    this.fetchEncounter(e.target.dataset.next)
+  }
+
+  fetchEncounter(id){
+    fetch(`/api/v1/encounters/${id}`)
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})
