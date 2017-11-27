@@ -27,9 +27,29 @@ const traits = (state = [], action) => {
   }
 }
 
+const inventory = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_ITEM':
+      return [
+        ...state,
+        action.item
+      ]
+    case 'REMOVE_ITEM':
+      let index = state.indexOf(action.item);
+      state.splice(index, 1);
+      return [
+        ...state
+      ]
+    default:
+      return state
+  }
+}
+
+
 const adventure = combineReducers({
   encounter,
-  traits
+  traits,
+  inventory
 })
 
 export default adventure;
