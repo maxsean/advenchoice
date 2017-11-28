@@ -10,10 +10,10 @@ e1 = Encounter.create(body: "A lullaby beckons you to awaken from your deep slee
 
 e2 = Encounter.create(body: "Darkness consumes you again as you descend to the familiar comfort of your unconscious. You will not receive another opportunity to awaken for a long time.")
 
-e3 = Encounter.create(body: "An orange light pierces the shadows, revealing thousands of people marching towards a horizon covered by a massive grey duststorm.")
+e3 = Encounter.create(body: "An orange light pierces the shadows, revealing thousands of people marching towards a horizon covered by a massive grey duststorm. All around you are descretated buildings, some tall enough to pierce the dark clouds. You are in a city shattered beyond recognition.")
 
 c1 = Choice.create(encounter: e1, body: "Ignore the siren's song and fall back to sleep.", next: 2)
 
 c2 = Choice.create(encounter: e1, body: "Heed the call. Awaken.", next: 3)
 
-o1 = Outcome.create(choice: c2, outcome_type: "trait", body: "Awakened")
+o1 = Outcome.create(choice: c2, outcome_type: "add_trait", body: "Awakened")
