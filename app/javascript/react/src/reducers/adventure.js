@@ -45,11 +45,23 @@ const inventory = (state = [], action) => {
   }
 }
 
+const skills = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_SKILL':
+      return [
+        ...state,
+        action.skill
+      ]
+    default:
+      return state
+  }
+}
 
 const adventure = combineReducers({
   encounter,
   traits,
-  inventory
+  inventory,
+  skills
 })
 
 export default adventure;
