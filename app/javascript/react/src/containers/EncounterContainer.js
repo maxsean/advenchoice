@@ -2,6 +2,7 @@ import React from 'react'
 import Choices from '../connectors/Choices'
 import Traits from '../connectors/Traits'
 import Inventory from '../connectors/Inventory'
+import Skills from '../connectors/Skills'
 
 class EncounterContainer extends React.Component {
   constructor(props){
@@ -27,6 +28,7 @@ class EncounterContainer extends React.Component {
         <Choices/>
         <Traits/>
         <Inventory/>
+        <Skills/>
       </div>
     )
   }
