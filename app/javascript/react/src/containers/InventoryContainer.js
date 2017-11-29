@@ -9,7 +9,7 @@ const InventoryContainer = (props) => {
     )
   })
   return(
-    <div>
+    <div className="inventory-container">
       Inventory:
       {inventory}
     </div>

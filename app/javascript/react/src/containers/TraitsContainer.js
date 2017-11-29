@@ -9,7 +9,7 @@ const TraitsContainer = (props) => {
     )
   })
   return(
-    <div>
+    <div className="traits-container">
       Traits:
       {traits}
     </div>

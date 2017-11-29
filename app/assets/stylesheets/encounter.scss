@@ -1,0 +1,52 @@
+.flex-container {
+  /*display: flex;
+  border: 2px solid black;
+  height: auto;*/
+}
+
+.banner-container {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 10px;
+}
+
+.encounter-text {
+  border: 2px solid black;
+  height: 150px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.choices-container {
+  border: 2px solid black;
+  line-height: 30px;
+  ul {
+    list-style: none;
+  }
+}
+
+.character-container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+
+.inventory-container {
+  border: 2px solid black;
+
+}
+
+.skills-container {
+  border: 2px solid black;
+
+}
+
+.traits-container {
+  border: 2px solid black;
+  ul {
+    list-style: none;
+  }
+}

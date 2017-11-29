@@ -9,7 +9,7 @@ const SkillsContainer = (props) => {
     )
   })
   return(
-    <div>
+    <div className="skills-container">
       Skills:
       {skills}
     </div>
