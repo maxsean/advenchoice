@@ -43,7 +43,7 @@ class ChoicesContainer extends React.Component{
       })
     }
     return(
-      <div>
+      <div className="choices-container">
         <ul>
           {choices}
         </ul>

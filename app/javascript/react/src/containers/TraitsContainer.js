@@ -9,9 +9,11 @@ const TraitsContainer = (props) => {
     )
   })
   return(
-    <div>
-      Traits:
-      {traits}
+    <div className="traits-container">
+      <ul>
+        Traits:
+        {traits}
+      </ul>
     </div>
   )
 }

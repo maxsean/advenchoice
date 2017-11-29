@@ -23,12 +23,22 @@ class EncounterContainer extends React.Component {
   render(){
     let encounterText = this.props.encounter.body
     return(
-      <div>
-        {encounterText}
-        <Choices/>
-        <Traits/>
-        <Inventory/>
-        <Skills/>
+      <div className="flex-container">
+        <div className="banner-container">
+          <h2>Advenchoice</h2>
+          <h3>Choose your destiny</h3>
+        </div>
+        <div className="encounter-container">
+          <span>
+            {encounterText}
+          </span>
+          <Choices/>
+        </div>
+        <div className="character-container">
+          <Inventory/>
+          <Skills/>
+          <Traits/>
+        </div>
       </div>
     )
   }

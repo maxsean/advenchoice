@@ -9,9 +9,11 @@ const InventoryContainer = (props) => {
     )
   })
   return(
-    <div>
-      Inventory:
-      {inventory}
+    <div className="inventory-container">
+      <ul>
+        Inventory:
+        {inventory}
+      </ul>
     </div>
   )
 }
