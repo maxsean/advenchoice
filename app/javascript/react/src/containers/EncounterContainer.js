@@ -28,10 +28,12 @@ class EncounterContainer extends React.Component {
           <h2>Advenchoice</h2>
           <h3>Choose your destiny</h3>
         </div>
-        <div className="encounter-text">
-          {encounterText}
+        <div className="encounter-container">
+          <span>
+            {encounterText}
+          </span>
+          <Choices/>
         </div>
-        <Choices/>
         <div className="character-container">
           <Inventory/>
           <Skills/>

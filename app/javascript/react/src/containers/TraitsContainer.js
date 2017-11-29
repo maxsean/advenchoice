@@ -10,8 +10,10 @@ const TraitsContainer = (props) => {
   })
   return(
     <div className="traits-container">
-      Traits:
-      {traits}
+      <ul>
+        Traits:
+        {traits}
+      </ul>
     </div>
   )
 }

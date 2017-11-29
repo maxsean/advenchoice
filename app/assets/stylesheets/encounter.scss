@@ -4,6 +4,11 @@
   height: auto;*/
 }
 
+ul {
+  padding: 0;
+  list-style-type: none;
+};
+
 .banner-container {
   border: 2px solid black;
   display: flex;
@@ -11,21 +16,30 @@
   flex-direction: column;
   text-align: center;
   line-height: 10px;
+  background-image: url("darkcloud.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.encounter-text {
+.encounter-container {
   border: 2px solid black;
-  height: 150px;
-  text-align: justify;
-  padding: 10px;
+  height: 300px;
+  padding: 50px;
+  background-image: url("parchment.jpg");
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .choices-container {
   border: 2px solid black;
+  margin-top: 20px;
+  width: 100%;
   line-height: 30px;
-  ul {
-    list-style: none;
-  }
 }
 
 .character-container {
@@ -36,17 +50,27 @@
 
 .inventory-container {
   border: 2px solid black;
-
+  background-image: url("dark-texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100px;
 }
 
 .skills-container {
   border: 2px solid black;
-
+  background-image: url("dark-texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100px;
 }
 
 .traits-container {
   border: 2px solid black;
-  ul {
-    list-style: none;
-  }
+  background-image: url("dark-texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 100px;
 }
