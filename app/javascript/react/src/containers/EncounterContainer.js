@@ -25,8 +25,8 @@ class EncounterContainer extends React.Component {
     return(
       <div className="flex-container">
         <div className="banner-container">
-          <h2>Advenchoice</h2>
-          <h3>Choose your destiny</h3>
+          <h1>Advenchoice</h1>
+          <h2>Choose your destiny</h2>
         </div>
         <div className="encounter-container">
           <span>

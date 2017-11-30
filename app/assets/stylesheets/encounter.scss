@@ -1,11 +1,10 @@
 .flex-container {
-  /*display: flex;
-  border: 2px solid black;
-  height: auto;*/
+  font-family: 'Prociono', cursive;
+  color: #F0EDE1;
 }
 
 ul {
-  padding: 0;
+  padding: 0 5px;
   list-style-type: none;
 };
 
@@ -15,7 +14,7 @@ ul {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  line-height: 10px;
+  line-height: 20px;
   background-image: url("darkcloud.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -33,19 +32,25 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: 'Playball', cursive;
+  font-size: 24px;
+  color: black;
 }
 
 .choices-container {
-  border: 2px solid black;
   margin-top: 20px;
   width: 100%;
   line-height: 30px;
+  font-family: 'Prociono', cursive;
+  font-size: 20px;
 }
 
 .character-container {
   display: flex;
   justify-content: space-around;
   border: 2px solid black;
+  height: 250px;
+  line-height: 25px;
 }
 
 .inventory-container {
@@ -54,7 +59,6 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   width: 33%;
-  height: 100px;
 }
 
 .skills-container {
@@ -63,7 +67,6 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   width: 33%;
-  height: 100px;
 }
 
 .traits-container {
@@ -72,5 +75,4 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   width: 33%;
-  height: 100px;
 }
