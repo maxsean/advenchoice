@@ -8,9 +8,14 @@ const ChoiceTile = (props) => {
     outcome_type = props.choice["outcomes"][0]["outcome_type"]
   }
   return(
-    <li data-next={props.choice.next} data-outcome={outcome} data-outcome_type={outcome_type} onClick={props.handleClick}>
-      {props.choice.body}
-    </li>
+    <div>
+      <li
+        className="hvr-float-shadow"
+        data-next={props.choice.next} data-outcome={outcome} data-outcome_type={outcome_type} onClick={props.handleClick}>
+        {props.choice.body}
+      </li>
+      <br/>
+    </div>
   )
 }
 
