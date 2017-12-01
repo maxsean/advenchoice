@@ -1,5 +1,8 @@
 /* Float Shadow */
 .hvr-float-shadow {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 15px;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
