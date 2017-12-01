@@ -10,8 +10,10 @@ const TraitsContainer = (props) => {
   })
   return(
     <div className="traits-container">
+      <div className="status-label">
+        <h3>Traits</h3>
+      </div>
       <ul>
-        Traits:
         {traits}
       </ul>
     </div>
