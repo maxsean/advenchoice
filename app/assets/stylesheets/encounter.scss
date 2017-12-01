@@ -48,12 +48,14 @@
 }
 
 ul {
-  padding: 0 5px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  padding: 5px 10px;
   list-style-type: none;
 };
 
 .banner-container {
-  border: 2px solid black;
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -66,7 +68,7 @@ ul {
 }
 
 .encounter-container {
-  border: 2px solid black;
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
   height: 300px;
   padding: 50px;
   background-image: url("parchment.jpg");
@@ -92,13 +94,13 @@ ul {
 .character-container {
   display: flex;
   justify-content: space-around;
-  border: 2px solid black;
   height: 250px;
   line-height: 25px;
+  margin-top: 2px;
 }
 
 .inventory-container {
-  border: 2px solid black;
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
   background-image: url("dark-texture.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -106,7 +108,7 @@ ul {
 }
 
 .skills-container {
-  border: 2px solid black;
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
   background-image: url("dark-texture.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -114,9 +116,22 @@ ul {
 }
 
 .traits-container {
-  border: 2px solid black;
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
   background-image: url("dark-texture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   width: 33%;
+}
+
+.status-label {
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
+  height: 2em;
+  padding: 0.5em;
+  text-align: center;
+  background-image: url("darkcloud.jpg");
+  background-repeat: no-repeat;
+  h3 {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }
 }

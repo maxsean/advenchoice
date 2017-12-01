@@ -10,8 +10,10 @@ const SkillsContainer = (props) => {
   })
   return(
     <div className="skills-container">
+      <div className="status-label">
+        <h3>Skills</h3>
+      </div>
       <ul>
-        Skills:
         {skills}
       </ul>
     </div>

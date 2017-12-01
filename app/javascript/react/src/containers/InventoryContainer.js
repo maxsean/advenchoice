@@ -10,8 +10,10 @@ const InventoryContainer = (props) => {
   })
   return(
     <div className="inventory-container">
+      <div className="status-label">
+        <h3>Inventory</h3>
+      </div>
       <ul>
-        Inventory:
         {inventory}
       </ul>
     </div>
