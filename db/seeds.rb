@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 e1 = Encounter.create(id: 1, body: "A lullaby beckons you to awaken from your deep sleep. Yet you feel safe and at peace in your dreams.")
 
@@ -29,7 +22,10 @@ e6 = Encounter.create(id: 6, body: "incomplete")
 c6 = Choice.create(encounter: e4, body: "Attempt to reach the door.", next: 7)
 e7 = Encounter.create!(id: 7, body: "You summon the last of your strength to make another push for the building. A particularily large person rams into you, however you were able to stay on your feet and maneuver around him. You reach the door and grasp the handle. It falls apart.")
 
-c7 = Choice.create(encounter: e7, body: "Keep the doorhandle and proceed upstairs", next: 8)
+c7 = Choice.create(encounter: e7, body: "Keep the doorhandle and proceed upstairs.", next: 8)
 o2 = Outcome.create(choice: c7, outcome_type: "add_item", body: "Doorhandle")
-c8 = Choice.create(encounter: e7, body: "Discard the doorhandle and proceed upstairs", next: 8)
-e8 = Encounter.create(id: 8, body: "Something happens...")
+c8 = Choice.create(encounter: e7, body: "Discard the doorhandle and proceed upstairs.", next: 8)
+e8 = Encounter.create(id: 8, body: "You make your way to the top of the stairs, to the third floor where you saw the glow from a window. You can still hear the rumble from the marching horde outside. Fortunately, the third floor only has one door, of which you notice a faint orange light emnating from below.")
+
+c9 = Choice.create(encounter: e8, body: "Knock on the door.", next: 9)
+e9 = Encounter.create(id: 9, body: "You knock on the door. No one answers.")
