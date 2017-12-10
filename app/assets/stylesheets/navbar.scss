@@ -1,0 +1,66 @@
+.navbar {
+  background-color: #101516;
+  color: #F0EDE2;
+  height: 50px;
+}
+
+.logged-out {
+  float: right;
+  font-family: 'Prociono', cursive;
+  box-sizing: border-box;
+  position: relative;
+  background: #DD4B39;
+  margin: 0.2em;
+  margin-top: 8px;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+  .nav-link {
+    color: #F0EDE2;
+    text-decoration: none;
+  }
+}
+
+.logged-out:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+
+.logged-out:focus {
+  outline: none;
+  background: #E74B37;
+}
+
+.logged-out:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+.logged-in {
+  font-family: 'Prociono', cursive;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2em;
+  .nav-link {
+    box-sizing: border-box;
+    background: #DD4B39;
+    padding: 0 15px 0 15px;
+    border: none;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #F0EDE2;
+    text-decoration: none;
+  }
+}
