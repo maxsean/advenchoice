@@ -1,4 +1,11 @@
 class Api::V1::UsersController < Api::V1::ApiController
+  def index
+    if current_user
+      render json: { user: current_user }
+    else
+      render json: { user: {id: false} }
+    end
+  end
 
   def create
     user = User.new(user_params)

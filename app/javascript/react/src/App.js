@@ -1,10 +1,10 @@
 import React from 'react';
-import Encounter from './connectors/Encounter'
+import Display from './connectors/Display'
 
 const App = props => {
   return(
     <div>
-      <Encounter />
+      <Display />
     </div>
   )
 }
