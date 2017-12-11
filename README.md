@@ -3,7 +3,7 @@
 # Advenchoice
 A Choose your own Adventure app.
 
-# Introduction
+## Introduction
 This is a work in progress to practice Redux with React.js and Rails.
 
 ## Technologies
