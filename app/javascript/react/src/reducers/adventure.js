@@ -57,11 +57,23 @@ const skills = (state = [], action) => {
   }
 }
 
+const user = (state = {id: false}, action) => {
+  switch (action.type) {
+    case 'SWITCH_USER':
+      return Object.assign({}, state, {
+        id: action.user.id
+      })
+    default:
+      return state
+  }
+}
+
 const adventure = combineReducers({
   encounter,
   traits,
   inventory,
-  skills
+  skills,
+  user
 })
 
 export default adventure;

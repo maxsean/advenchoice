@@ -10,13 +10,11 @@ class EncounterContainer extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     var encounter = this.props.encounter
     fetch(`/api/v1/encounters/${encounter.id}`)
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})
-      console.log(this.props)
     })
   }
 
