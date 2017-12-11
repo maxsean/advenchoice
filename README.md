@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Advenchoice
+A Choose your own Adventure app.
 
-Things you may want to cover:
+# Introduction
+This is a work in progress to practice Redux with React.js and Rails.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technologies
+* Redux: state management
+* Ruby on Rails: back-end mainly used for API endpoints
+* React.js: for quick and responsive user experience
