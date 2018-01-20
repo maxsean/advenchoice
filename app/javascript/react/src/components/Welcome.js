@@ -2,8 +2,16 @@ import React from 'react'
 
 const Welcome = (props) => {
   return(
-    <div>
-      Welcome
+    <div className='welcome'>
+      <div>
+        <p>
+          Welcome to Advenchoice
+        </p>
+        <br/>
+        <p>
+          Please Sign In
+        </p>
+      </div>
     </div>
   )
 }
