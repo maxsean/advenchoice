@@ -51,16 +51,17 @@
   font-family: 'Prociono', cursive;
   display: flex;
   justify-content: space-between;
-  margin: 0.2em;
+  margin: 5px;
   .nav-link {
-    box-sizing: border-box;
     background: #DD4B39;
-    padding: 0 15px 0 15px;
+    margin: 5px 0;
+    padding: 10px 15px;
     border: none;
     text-align: left;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 15px;
     color: #F0EDE2;
     text-decoration: none;
+    height: 20px;
   }
 }

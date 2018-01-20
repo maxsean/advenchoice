@@ -21,7 +21,6 @@ class DisplayContainer extends React.Component {
 
   render() {
     let display;
-    debugger;
     if(this.props.user.id){
       display = <Encounter />
     } else {
