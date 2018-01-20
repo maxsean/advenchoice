@@ -10,7 +10,6 @@ class ChoicesContainer extends React.Component{
 
   handleClick(e){
     e.preventDefault()
-    debugger;
     if (e.target.dataset.outcome_type == "add_trait") {
       this.props.dispatch({type: 'ADD_TRAIT', trait: e.target.dataset.outcome})
     } else if (e.target.dataset.outcome_type == "add_item") {
