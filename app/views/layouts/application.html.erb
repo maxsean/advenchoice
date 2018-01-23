@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Playball|Prociono|Tangerine" rel="stylesheet">
   </head>
 
-  <body>
+  <body style="background-color:#000000">
     <div class="navbar">
       <% if current_user %>
         <div class="logged-in">
-          <p>Welcome <%=current_user.name %><p>      
+          <p>Welcome <%=current_user.name %><p>
           <%= link_to "Sign out", signout_path, id: "sign_out", class: "nav-link" %>
         </div>
       <% else %>
