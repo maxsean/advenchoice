@@ -1,42 +1,36 @@
 .welcome {
-  background-image: url('bonfire.jpeg');
-  background-size: cover;
-  background-position: right;
+  background-image: url('dark_tunnel');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
   height: 90vh;
   width: 100%;
-  text-align: center;
+  text-align: left;
+}
 
-  font-size: 40px;
-  font-family: 'Prociono', cursive;
+.welcome-title {
   p {
     margin: 0;
   }
-
-  color: #F45F19;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #542003;
-
-  animation-delay: 0.5s;
-  animation-duration: 15s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  animation-name: fireFlicker;
-  animation-timing-function: linear;
+  font-size: 24px;
+  font-family: 'Prociono', cursive;
+  color: #EAC67A;
+  box-shadow: 3px 5px 6px -2px #984B43;
+  background-color: #233237;
+  margin: 20px;
+  padding: 20px;
 }
 
-@keyframes fireFlicker {
-  0%, 10% { opacity: 1; }
-  15%,20% { opacity: 0.95; }
-  22%,23% { opacity: 0.98; }
-  25%,35% { opacity: 0.92; }
-  39%,42% { opacity: 0.98; }
-  44%,47% { opacity: 0.92; }
-  49%,50% { opacity: 0.98; }
-  52%,54% { opacity: 0.92; }
-  57%,58% { opacity: 0.96; }
-  60%,63% { opacity: 0.93; }
-  65%,72% { opacity: 0.92; }
-  77%,85% { opacity: 0.98; }
-  90%,95% { opacity: 0.93; }
-  100% { opacity: 1; }
+.welcome-tile {
+  p {
+    margin: 0;
+  }
+  font-size: 14px;
+  font-family: 'Prociono', cursive;
+  color: #18121E;
+  box-shadow: 3px 5px 6px -2px #984B43;
+  background-image: url('parchment');
+  margin: 20px;
+  padding: 20px;
+  white-space: pre-wrap;
 }

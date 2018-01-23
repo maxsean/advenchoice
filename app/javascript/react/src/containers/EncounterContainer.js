@@ -3,6 +3,7 @@ import Choices from '../connectors/Choices'
 import Traits from '../connectors/Traits'
 import Inventory from '../connectors/Inventory'
 import Skills from '../connectors/Skills'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 class EncounterContainer extends React.Component {
   constructor(props){
@@ -26,12 +27,21 @@ class EncounterContainer extends React.Component {
           <h1>Advenchoice</h1>
           <h2>Choose your destiny</h2>
         </div>
-        <div className="encounter-container">
-          <span>
-            {encounterText}
-          </span>
+        <CSSTransitionGroup
+          transitionName="encountertext"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}>
+        <div
+          key={1}
+          className="encounter-container">
+            <span>
+              {encounterText}
+            </span>
           <Choices/>
         </div>
+      </CSSTransitionGroup>
         <div className="character-container">
           <Inventory/>
           <Skills/>
