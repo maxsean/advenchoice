@@ -107,6 +107,15 @@ ul {
   overflow: scroll;
 }
 
+.encountertext-appear {
+  opacity: 0.01;
+}
+
+.encountertext-appear.encountertext-appear-active {
+  opacity: 1;
+  transition: opacity 3s ease-in;
+}
+
 .choices-container {
   margin-top: 20px;
   width: 100%;
