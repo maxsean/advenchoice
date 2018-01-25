@@ -22,8 +22,15 @@ class Api::V1::UsersController < Api::V1::ApiController
   def update
     body = JSON.parse(request.body.read)
     user = User.find(params[:id])
+    page = body["new_encounter"]
 
-    user.update(encounter: body["new_encounter"])
+    if page < 1
+      user.update(encounter: 1)
+    elsif page > Encounter.count
+      user.update(encounter: Encounter.count)
+    else
+      user.update(encounter: page)
+    end
   end
 
   protected
