@@ -19,6 +19,13 @@ class Api::V1::UsersController < Api::V1::ApiController
     end
   end
 
+  def update
+    body = JSON.parse(request.body.read)
+    user = User.find(params[:id])
+
+    user.update(encounter: body["new_encounter"])
+  end
+
   protected
 
   def user_params
