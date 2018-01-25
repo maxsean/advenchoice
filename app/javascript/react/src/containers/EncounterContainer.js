@@ -54,10 +54,11 @@ class EncounterContainer extends React.Component {
   render(){
     let encounterText = this.props.encounter.body
     let encounterid = this.props.encounter.id
+    let chapter = this.props.encounter.chapter
     return(
       <div className="flex-container">
         <div className="banner-container">
-          <h1>The Ashen Veil</h1>
+          <h1>{chapter}</h1>
         </div>
         <CSSTransitionGroup
           transitionName="encountertext"

@@ -8,6 +8,7 @@ const encounter = (state = initialState, action) => {
       return Object.assign({}, state, {
         id: action.encounter.id,
         body: action.encounter.body,
+        chapter: action.encounter.chapter,
         choices: action.choices
       })
     default:
