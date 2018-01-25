@@ -60,6 +60,7 @@ ul {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  color: #EAC67A;
   line-height: 20px;
   background-image: url("darkcloud.jpg");
   background-attachment: fixed;
@@ -97,13 +98,13 @@ ul {
   background-image: url("parchment.jpg");
   background-size: cover;
   display: flex;
-  text-align: center;
+  text-align: left;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Playball', cursive;
+  font-family: 'Prociono', cursive;
   font-size: 24px;
-  color: black;
+  color: #233237;
   overflow: scroll;
 }
 

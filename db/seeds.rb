@@ -1,31 +1,7 @@
 
-e1 = Encounter.create(id: 1, body: "A lullaby beckons you to awaken from your deep sleep. Yet you feel safe and at peace in your dreams.")
+e1 = Encounter.create(id: 1, chapter: "The Ashen Veil", body: "A soothing song beckons Korsov from the abyss. The shadows obscuring his vision gradually fade away as a sickly light stings his eyes. Something pushes Korsov forward, into a writhing mass of flesh and stone. His vision blurred, Korsov stumbles over debris and sways heavily into his surroundings. There is warmth, but it feels unnatural, almost malignant.")
 
-c1 = Choice.create(encounter: e1, body: "Ignore the siren's song and fall back to sleep.", next: 2)
-e2 = Encounter.create(id: 2, body: "Darkness consumes you again as you descend to the familiar comfort of your unconscious. You will not receive another opportunity to awaken for a long time.")
+e2 = Encounter.create(id: 2, chapter: "The Ashen Veil", body: "That song, it urges him to escape. Korsov, numb and irrational, deliberately thrashes at his prison. The masses of flesh and stone gradually give way, but Korsov was inpatient. Korsov reaches upward, a cool air embraces the tips of his fingers. He then senses an orange light emanating above. Transfixed by the glow, he leaps. His strength propels him skyward, a cold light rakes against his flesh. He lands hard into a derelict structure, a tower. It is then he feels a long chain tied to his waist. He severs it and hears it fall below.")
 
-c2 = Choice.create(encounter: e1, body: "Heed the call. Awaken.", next: 3)
-o1 = Outcome.create(choice: c2, outcome_type: "add_trait", body: "Awakened")
-
-e3 = Encounter.create(id: 3, body: "An orange light pierces the shadows, revealing thousands of people marching towards a horizon covered by a massive grey duststorm. You are among them, and you struggle against the momentum of the horde. All around you are descretated buildings, some tall enough to pierce the dark clouds. You are in a city shattered beyond recognition.
-  You see a faint light emnating from the third story of a stout building laden with brown stone.")
-
-c3 = Choice.create(encounter: e3, body: "Push your way toward the brownstone building.", next: 4)
-e4 = Encounter.create(id: 4, body: "You make your way across, pushing your mindless peers away. However the horde proves overwhelming and you find yourself quickly exhausted. You see a door to the building. It's about ten meters away.")
-
-c4 = Choice.create(encounter: e3, body: "Continue marching with the horde.", next: 5)
-e5 = Encounter.create(id: 5, body: "incomplete")
-
-c5 = Choice.create(encounter: e4, body: "Give up, wait for another opportunity while you recover.", next: 6)
-e6 = Encounter.create(id: 6, body: "incomplete")
-
-c6 = Choice.create(encounter: e4, body: "Attempt to reach the door.", next: 7)
-e7 = Encounter.create!(id: 7, body: "You summon the last of your strength to make another push for the building. A particularily large person rams into you, however you were able to stay on your feet and maneuver around him. You reach the door and grasp the handle. It falls apart.")
-
-c7 = Choice.create(encounter: e7, body: "Keep the doorhandle and proceed upstairs.", next: 8)
-o2 = Outcome.create(choice: c7, outcome_type: "add_item", body: "Doorhandle")
-c8 = Choice.create(encounter: e7, body: "Discard the doorhandle and proceed upstairs.", next: 8)
-e8 = Encounter.create(id: 8, body: "You make your way to the top of the stairs, to the third floor where you saw the glow from a window. You can still hear the rumble from the marching horde outside. Fortunately, the third floor only has one door, of which you notice a faint orange light emnating from below.")
-
-c9 = Choice.create(encounter: e8, body: "Knock on the door.", next: 9)
-e9 = Encounter.create(id: 9, body: "You knock on the door. No one answers.")
+e3 = Encounter.create(id: 3, chapter: "The Ashen Veil", body: "For the first time in decades, Korsov inhales deeply, filling his lungs with an oddly cool dense air, and exhaling it sharply. It takes a minute for him to settle his breathing to a normal effortless rhythm. His senses gradually clear and he finds himself sitting by the shattered window of an office building, overlooking hundreds of thousands of gaunt, sickly creatures, all marching towards a thick gray dust storm in the distance. Above, high in the sky, an orange sphere meekly drops its light to the hallowed grounds below.
+")
