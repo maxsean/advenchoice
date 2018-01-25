@@ -5,7 +5,8 @@ import EncounterContainer from '../containers/EncounterContainer'
 
 const mapStateToProps = state => {
   return {
-    encounter: state.encounter
+    encounter: state.encounter,
+    user: state.user
   }
 }
 
