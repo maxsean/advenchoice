@@ -5,7 +5,8 @@ import ChoicesContainer from '../containers/ChoicesContainer'
 const mapStateToProps = state => {
   return {
     choices: state.encounter.choices,
-    state: state
+    state: state,
+    user: state.user
   }
 }
 

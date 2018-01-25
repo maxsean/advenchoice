@@ -61,7 +61,8 @@ const user = (state = {id: false}, action) => {
   switch (action.type) {
     case 'SWITCH_USER':
       return Object.assign({}, state, {
-        id: action.user.id
+        id: action.user.id,
+        encounter: action.user.encounter
       })
     default:
       return state

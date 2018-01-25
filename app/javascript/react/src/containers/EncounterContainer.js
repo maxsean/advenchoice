@@ -8,24 +8,56 @@ import { CSSTransitionGroup } from 'react-transition-group'
 class EncounterContainer extends React.Component {
   constructor(props){
     super(props);
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
-    var encounter = this.props.encounter
-    fetch(`/api/v1/encounters/${encounter.id}`)
+    var encounter = this.props.user.encounter
+    this.changeEncounter(encounter)
+  }
+
+  changeEncounter(id) {
+    fetch(`/api/v1/encounters/${id}`)
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})
     })
   }
 
+  updateUser(id){
+    let user = this.props.user
+    let payload = {
+      user: user,
+      new_encounter: id
+    }
+    fetch(`/api/v1/users/${user.id}`, {
+      credentials: 'same-origin',
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    })
+  }
+
+  handleClick(event) {
+    let id = this.props.encounter.id
+    if (event.target.id == 'prev') {
+      id = id - 1
+      this.updateUser(id)
+      this.changeEncounter(id)
+    } else if (event.target.id == 'next') {
+      id = id + 1
+      this.updateUser(id)
+      this.changeEncounter(id)
+    }
+  }
+
   render(){
     let encounterText = this.props.encounter.body
+    let encounterid = this.props.encounter.id
     return(
       <div className="flex-container">
         <div className="banner-container">
-          <h1>Advenchoice</h1>
-          <h2>Choose your destiny</h2>
+          <h1>The Ashen Veil</h1>
         </div>
         <CSSTransitionGroup
           transitionName="encountertext"
@@ -42,10 +74,19 @@ class EncounterContainer extends React.Component {
           <Choices/>
         </div>
       </CSSTransitionGroup>
-        <div className="character-container">
-          <Inventory/>
-          <Skills/>
-          <Traits/>
+        <div className="utility">
+          <button
+            onClick={this.handleClick}
+            className='hvr-back-pulse'
+            id='prev'>
+            Previous Page
+          </button>
+          <button
+            onClick={this.handleClick}
+            className='hvr-back-pulse'
+            id='next'>
+            Next Page
+          </button>
         </div>
       </div>
     )

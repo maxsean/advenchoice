@@ -16,7 +16,22 @@ class ChoicesContainer extends React.Component{
       this.props.dispatch({type: 'ADD_ITEM', item: e.target.dataset.outcome})
     }
 
+    this.updateUser(e.target.dataset.next)
     this.fetchEncounter(e.target.dataset.next)
+  }
+
+  updateUser(id){
+    let user = this.props.user
+    let payload = {
+      user: user,
+      new_encounter: id
+    }
+    fetch(`/api/v1/users/${user.id}`, {
+      credentials: 'same-origin',
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    })
   }
 
   fetchEncounter(id){
@@ -24,7 +39,6 @@ class ChoicesContainer extends React.Component{
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})
-      console.log(this.props)
     })
   }
 
