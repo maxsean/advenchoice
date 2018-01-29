@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125162711) do
+ActiveRecord::Schema.define(version: 20180129003640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "choices", force: :cascade do |t|
     t.bigint "encounter_id"
@@ -42,6 +48,16 @@ ActiveRecord::Schema.define(version: 20180125162711) do
     t.index ["choice_id"], name: "index_outcomes_on_choice_id"
   end
 
+  create_table "revelations", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "encounter_id", null: false
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_revelations_on_character_id"
+    t.index ["encounter_id"], name: "index_revelations_on_encounter_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
@@ -51,6 +67,7 @@ ActiveRecord::Schema.define(version: 20180125162711) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "encounter", default: 1
+    t.string "revelations", default: [], array: true
   end
 
 end
