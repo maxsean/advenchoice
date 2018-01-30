@@ -1,45 +1,45 @@
-import React from 'react'
-import Choices from '../connectors/Choices'
-import Traits from '../connectors/Traits'
-import Inventory from '../connectors/Inventory'
-import Skills from '../connectors/Skills'
-import { CSSTransitionGroup } from 'react-transition-group'
+import React from 'react';
+import Choices from '../connectors/Choices';
+import Traits from '../connectors/Traits';
+import Inventory from '../connectors/Inventory';
+import Skills from '../connectors/Skills';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 class EncounterContainer extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
-    var encounter = this.props.user.encounter
-    this.changeEncounter(encounter)
-  }
+    var encounter = this.props.user.encounter;
+    this.changeEncounter(encounter);
+  };
 
   changeEncounter(id) {
     fetch(`/api/v1/encounters/${id}`)
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})
-    })
-  }
+    });
+  };
 
   updateUser(id){
-    let user = this.props.user
+    let user = this.props.user;
     let payload = {
       user: user,
       new_encounter: id
-    }
+    };
     fetch(`/api/v1/users/${user.id}`, {
       credentials: 'same-origin',
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(payload)
     })
-  }
+  };
 
   handleClick(event) {
-    let id = this.props.encounter.id
+    let id = this.props.encounter.id;
     if (event.target.id == 'prev') {
       id = id - 1
       this.updateUser(id)
@@ -48,13 +48,13 @@ class EncounterContainer extends React.Component {
       id = id + 1
       this.updateUser(id)
       this.changeEncounter(id)
-    }
-  }
+    };
+  };
 
-  render(){
-    let encounterText = this.props.encounter.body
-    let encounterid = this.props.encounter.id
-    let chapter = this.props.encounter.chapter
+  render() {
+    let encounterText = this.props.encounter.body;
+    let encounterid = this.props.encounter.id;
+    let chapter = this.props.encounter.chapter;
     return(
       <div className="flex-container">
         <div className="banner-container">
@@ -90,8 +90,8 @@ class EncounterContainer extends React.Component {
           </button>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
-export default EncounterContainer
+export default EncounterContainer;
