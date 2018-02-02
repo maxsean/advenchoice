@@ -17,7 +17,11 @@ class EncounterContainer extends React.Component {
   };
 
   changeEncounter(id) {
-    fetch(`/api/v1/encounters/${id}`)
+    fetch(`/api/v1/encounters/${id}`, {
+      credentials: 'same-origin',
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json'},
+    })
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'CHANGE_ENCOUNTER', encounter: data, choices: data["choices"]})

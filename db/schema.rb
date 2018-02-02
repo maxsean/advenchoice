@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129003640) do
+ActiveRecord::Schema.define(version: 20180202180914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 20180129003640) do
     t.string "chapter"
   end
 
+  create_table "journals", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "revelation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["revelation_id"], name: "index_journals_on_revelation_id"
+    t.index ["user_id", "revelation_id"], name: "index_journals_on_user_id_and_revelation_id", unique: true
+    t.index ["user_id"], name: "index_journals_on_user_id"
+  end
+
   create_table "outcomes", force: :cascade do |t|
     t.bigint "choice_id"
     t.string "outcome_type"
@@ -52,6 +62,7 @@ ActiveRecord::Schema.define(version: 20180129003640) do
     t.bigint "character_id", null: false
     t.bigint "encounter_id", null: false
     t.text "body", null: false
+    t.string "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["character_id"], name: "index_revelations_on_character_id"
@@ -67,7 +78,6 @@ ActiveRecord::Schema.define(version: 20180129003640) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "encounter", default: 1
-    t.string "revelations", default: [], array: true
   end
 
 end
