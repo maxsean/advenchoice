@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const SkillsContainer = (props) => {
   let skills = props.skills.map(skill => {
@@ -6,8 +6,8 @@ const SkillsContainer = (props) => {
       <li key={String(Date.now()) + '-' + props.skills.indexOf(skill)}>
         {skill}
       </li>
-    )
-  })
+    );
+  });
   return(
     <div className="skills-container">
       <div className="status-label">
@@ -17,7 +17,7 @@ const SkillsContainer = (props) => {
         {skills}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SkillsContainer
+export default SkillsContainer;

@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const ChoiceTile = (props) => {
   let outcome;
   let outcome_type;
   if (props.choice["outcomes"][0]) {
-    outcome = props.choice["outcomes"][0]["body"]
-    outcome_type = props.choice["outcomes"][0]["outcome_type"]
-  }
+    outcome = props.choice["outcomes"][0]["body"];
+    outcome_type = props.choice["outcomes"][0]["outcome_type"];
+  };
   return(
     <div>
       <li
@@ -16,7 +16,7 @@ const ChoiceTile = (props) => {
       </li>
       <br/>
     </div>
-  )
-}
+  );
+};
 
-export default ChoiceTile
+export default ChoiceTile;

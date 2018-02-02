@@ -1,10 +1,10 @@
-import React from 'react'
-import Encounter from '../connectors/Encounter'
-import Welcome from '../components/Welcome'
+import React from 'react';
+import Encounter from '../connectors/Encounter';
+import Welcome from '../components/Welcome';
 
 class DisplayContainer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
@@ -16,12 +16,12 @@ class DisplayContainer extends React.Component {
     .then(response => response.json())
     .then(data => {
       this.props.dispatch({type: 'SWITCH_USER', user: data.user})
-    })
-  }
+    });
+  };
 
   render() {
     let display;
-    if(this.props.user.id){
+    if(this.props.user.id) {
       display = <Encounter />
     } else {
       display = <Welcome />
@@ -30,8 +30,8 @@ class DisplayContainer extends React.Component {
       <div>
         {display}
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
-export default DisplayContainer
+export default DisplayContainer;
