@@ -2,5 +2,6 @@ class Revelation < ApplicationRecord
   belongs_to :character
   belongs_to :encounter
 
-  validaties :body, presence: true
+  validates :body, presence: true
+  validates :date, presence: true
 end
