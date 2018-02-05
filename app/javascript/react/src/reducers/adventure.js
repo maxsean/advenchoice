@@ -28,7 +28,7 @@ const traits = (state = [], action) => {
   };
 };
 
-const inventory = (state = [], action) => {
+const journal = (state = [], action) => {
   switch (action.type) {
     case 'ADD_ITEM':
       return [
@@ -73,7 +73,7 @@ const user = (state = {id: false}, action) => {
 const adventure = combineReducers({
   encounter,
   traits,
-  inventory,
+  journal,
   skills,
   user
 });
