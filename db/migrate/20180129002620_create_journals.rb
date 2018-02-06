@@ -1,6 +1,6 @@
-class CreateRevelations < ActiveRecord::Migration[5.1]
+class CreateJournals < ActiveRecord::Migration[5.1]
   def change
-    create_table :revelations do |t|
+    create_table :journals do |t|
       t.belongs_to :character, null: false
       t.belongs_to :encounter, null: false
       t.text :body, null: false
