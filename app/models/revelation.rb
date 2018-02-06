@@ -1,7 +1,6 @@
 class Revelation < ApplicationRecord
-  belongs_to :character
-  belongs_to :encounter
+  belongs_to :user
+  belongs_to :journal
 
-  validates :body, presence: true
-  validates :date, presence: true
+  validates :user_id, uniqueness: { scope: :journal_id }
 end

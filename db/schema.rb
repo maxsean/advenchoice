@@ -40,13 +40,14 @@ ActiveRecord::Schema.define(version: 20180202180914) do
   end
 
   create_table "journals", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "revelation_id"
+    t.bigint "character_id", null: false
+    t.bigint "encounter_id", null: false
+    t.text "body", null: false
+    t.string "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["revelation_id"], name: "index_journals_on_revelation_id"
-    t.index ["user_id", "revelation_id"], name: "index_journals_on_user_id_and_revelation_id", unique: true
-    t.index ["user_id"], name: "index_journals_on_user_id"
+    t.index ["character_id"], name: "index_journals_on_character_id"
+    t.index ["encounter_id"], name: "index_journals_on_encounter_id"
   end
 
   create_table "outcomes", force: :cascade do |t|
@@ -59,14 +60,13 @@ ActiveRecord::Schema.define(version: 20180202180914) do
   end
 
   create_table "revelations", force: :cascade do |t|
-    t.bigint "character_id", null: false
-    t.bigint "encounter_id", null: false
-    t.text "body", null: false
-    t.string "date", null: false
+    t.bigint "user_id"
+    t.bigint "journal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["character_id"], name: "index_revelations_on_character_id"
-    t.index ["encounter_id"], name: "index_revelations_on_encounter_id"
+    t.index ["journal_id"], name: "index_revelations_on_journal_id"
+    t.index ["user_id", "journal_id"], name: "index_revelations_on_user_id_and_journal_id", unique: true
+    t.index ["user_id"], name: "index_revelations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

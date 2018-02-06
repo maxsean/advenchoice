@@ -1,6 +1,7 @@
 class Journal < ApplicationRecord
-  belongs_to :user
-  belongs_to :revelation
+  belongs_to :character
+  belongs_to :encounter
 
-  validates :user_id, uniqueness: { scope: :revelation_id }
+  validates :body, presence: true
+  validates :date, presence: true
 end
