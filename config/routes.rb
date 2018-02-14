@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :encounters, only: [:show]
       resources :sessions, only: [:create, :destroy]
       resources :users, only: [:index, :create, :update]
+      resources :revelations, only: [:index]
     end
   end
 

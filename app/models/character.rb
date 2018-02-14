@@ -1,4 +1,4 @@
 class Character < ApplicationRecord
-  has_many :revelations
+  has_many :journals
   validates :name, presence: true
 end
