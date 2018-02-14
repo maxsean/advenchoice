@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :journals
-  has_many :revelations, through: :journals
+  has_many :revelations
+  has_many :journals, through: :revelations
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
