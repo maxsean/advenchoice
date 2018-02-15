@@ -4,7 +4,8 @@ import DisplayContainer from '../containers/DisplayContainer';
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    user: state.user,
+    toggles: state.toggles
   };
 };
 
