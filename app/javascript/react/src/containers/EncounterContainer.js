@@ -1,7 +1,6 @@
 import React from 'react';
 import Choices from '../connectors/Choices';
-import Traits from '../connectors/Traits';
-import Journal from '../connectors/Journal';
+import Toggles from '../connectors/Toggles';
 import Skills from '../connectors/Skills';
 import { CSSTransitionGroup } from 'react-transition-group';
 
@@ -93,6 +92,7 @@ class EncounterContainer extends React.Component {
             Next Page
           </button>
         </div>
+        <Toggles />
       </div>
     );
   };

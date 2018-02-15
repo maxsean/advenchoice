@@ -1,6 +1,7 @@
 import React from 'react';
 import Encounter from '../connectors/Encounter';
 import Welcome from '../components/Welcome';
+import Revelations from '../connectors/Revelations'
 
 class DisplayContainer extends React.Component {
   constructor(props) {
@@ -21,14 +22,22 @@ class DisplayContainer extends React.Component {
 
   render() {
     let display;
+    let overlay;
+
     if(this.props.user.id) {
       display = <Encounter />
     } else {
       display = <Welcome />
+    };
+
+    if(this.props.toggles.includes("revelations")) {
+      overlay = <Revelations />
     }
+
     return(
       <div>
         {display}
+        {overlay}
       </div>
     );
   };
