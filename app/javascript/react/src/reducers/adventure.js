@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
-const initialState = {id: 1, choices: []};
+const initialEncounter = {id: 1, choices: []};
 
-const encounter = (state = initialState, action) => {
+const encounter = (state = initialEncounter, action) => {
   switch (action.type) {
     case 'CHANGE_ENCOUNTER':
       return Object.assign({}, state, {
@@ -16,31 +16,29 @@ const encounter = (state = initialState, action) => {
   };
 };
 
-const traits = (state = [], action) => {
+const toggles = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TRAIT':
+    case 'TOGGLE_ON':
       return [
         ...state,
-        action.trait
+        action.toggle
+      ];
+    case 'TOGGLE_OFF':
+      let index = state.indexOf(action.toggle);
+      state.splice(index, 1);
+      return [
+        ...state
       ];
     default:
       return state;
   };
 };
 
-const journal = (state = [], action) => {
+const revelations = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_ITEM':
-      return [
-        ...state,
-        action.item
-      ];
-    case 'REMOVE_ITEM':
-      let index = state.indexOf(action.item);
-      state.splice(index, 1);
-      return [
-        ...state
-      ];
+    case 'UPDATE_REV':
+      return Object.assign([], state, action.revelations
+      );
     default:
       return state;
   };
@@ -72,8 +70,8 @@ const user = (state = {id: false}, action) => {
 
 const adventure = combineReducers({
   encounter,
-  traits,
-  journal,
+  toggles,
+  revelations,
   skills,
   user
 });
