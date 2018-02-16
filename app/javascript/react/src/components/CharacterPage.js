@@ -16,8 +16,8 @@ const CharacterPage = (props) => {
   };
   name = props.name
   return(
-    <div>
-      <div>
+    <div className="character-page">
+      <div className="character-name">
         {name}
       </div>
       {entries}

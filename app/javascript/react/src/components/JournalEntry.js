@@ -4,8 +4,8 @@ const JournalEntry = (props) => {
   let body = props.body
   let date = props.date
   return(
-    <div>
-      <div>{date}</div>
+    <div className="journal-entry">
+      <div>Date: {date}</div>
       <div>{body}</div>
     </div>
   );

@@ -1,0 +1,42 @@
+.character-revelations {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Prociono', cursive;
+  background-color: #18121E;
+  height: 500px;
+  overflow: scroll;
+}
+
+.roster {
+  width: 20%;
+  margin: 10px;
+}
+
+.character-page {
+  width: 80%;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.character-name {
+  font-size: 24px;
+  color: #EAC57D;
+  text-align: left;
+  align-items: left;
+  margin-bottom: 5px;
+}
+
+.journal-entry {
+  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
+  padding: 5%;
+  background-image: url("parchment.jpg");
+  background-size: cover;
+  display: flex;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
+  color: #233237;
+  overflow: scroll;
+}
