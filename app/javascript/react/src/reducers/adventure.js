@@ -44,13 +44,10 @@ const revelations = (state = [], action) => {
   };
 };
 
-const skills = (state = [], action) => {
+const character = (state = "", action) => {
   switch (action.type) {
-    case 'ADD_SKILL':
-      return [
-        ...state,
-        action.skill
-      ];
+    case 'CHANGE_CHARACTER':
+      return state = action.character;
     default:
       return state;
   };
@@ -72,7 +69,7 @@ const adventure = combineReducers({
   encounter,
   toggles,
   revelations,
-  skills,
+  character,
   user
 });
 
