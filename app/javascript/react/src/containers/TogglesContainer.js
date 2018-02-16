@@ -16,7 +16,7 @@ class TogglesContainer extends React.Component {
     return(
       <div className="toggles-container">
         <button
-          className="revelations-button"
+          className="hvr-back-pulse"
           onClick={this.handleClick}
           name="revelations">
           Revelations

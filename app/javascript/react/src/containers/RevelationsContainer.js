@@ -1,4 +1,5 @@
 import React from 'react';
+import Character from '../connectors/Character'
 import CharacterPage from '../components/CharacterPage';
 
 class RevelationsContainer extends React.Component {
@@ -25,26 +26,26 @@ class RevelationsContainer extends React.Component {
 
   handleClose(e) {
     e.preventDefault();
-    this.props.dispatch({type: "TOGGLE_OFF", toggle: e.target.name});
+    this.props.dispatch({type: "TOGGLE_OFF", toggle: e.target.name})
+    this.props.dispatch({type: "CHANGE_CHARACTER", character: ""})
   }
 
   render() {
     let revs = this.props.revelations
-    console.log(revs)
 
     let korsovw;
-    if(revs.length > 0) {
-      korsovw = revs.filter(rev => rev.journal.character.name == "Korsov Whiteacre")
-    }
+
     return(
       <div className="revelations-container">
-        <button
-          name="revelations"
-          onClick={this.handleClose}>X</button>
-          <CharacterPage
-            name={"Korsov Whiteacre"}
-            entries={korsovw}
-          />
+        <div className="revelations-contents">
+          <button
+            className="hvr-back-pulse"
+            name="revelations"
+            onClick={this.handleClose}>Close Revelations</button>
+            <Character
+              revs={revs}
+            />
+        </div>
       </div>
     );
   };

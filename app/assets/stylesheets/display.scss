@@ -2,3 +2,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.blur {
+  filter: blur(3px);
+}

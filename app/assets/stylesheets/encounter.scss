@@ -140,28 +140,25 @@ ul {
   width: 33%;
 }
 
-.skills-container {
-  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
-  background-image: url("dark-texture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 33%;
-}
-
 .toggles-container {
-  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
-  background-image: url("dark-texture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 33%;
+  display: flex;
+  justify-content: center;
+  border-width: thin;
+  border-color: white;
 }
 
 .revelations-container {
-  box-shadow: inset -0px -0px 6px 2px #F0EDE1 ;
-  background-image: url("dark-texture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 33%;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.revelations-contents {
+  margin: 10%;
 }
 
 .status-label {

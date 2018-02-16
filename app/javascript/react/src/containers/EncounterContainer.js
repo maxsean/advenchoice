@@ -1,7 +1,7 @@
 import React from 'react';
 import Choices from '../connectors/Choices';
 import Toggles from '../connectors/Toggles';
-import Skills from '../connectors/Skills';
+import Character from '../connectors/Character';
 import { CSSTransitionGroup } from 'react-transition-group';
 
 class EncounterContainer extends React.Component {

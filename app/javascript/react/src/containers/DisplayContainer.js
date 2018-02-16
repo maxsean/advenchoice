@@ -23,6 +23,7 @@ class DisplayContainer extends React.Component {
   render() {
     let display;
     let overlay;
+    let dclass;
 
     if(this.props.user.id) {
       display = <Encounter />
@@ -32,11 +33,14 @@ class DisplayContainer extends React.Component {
 
     if(this.props.toggles.includes("revelations")) {
       overlay = <Revelations />
+      dclass = "blur"
     }
 
     return(
       <div>
-        {display}
+        <div className={dclass}>
+          {display}
+        </div>
         {overlay}
       </div>
     );
