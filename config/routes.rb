@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'auth/:provider/callback', to: 'api/v1/sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'api/v1/sessions#destroy', as: 'signout'
